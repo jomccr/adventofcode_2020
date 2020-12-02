@@ -1,2 +1,2 @@
-# adventofcode_2020
-Python solutions to advent of code 2020 along with input files 
+# Advent of Code (2020)
+Python solutions to the [advent of code](https://adventofcode.com/2020/) 2020 along with input files 
