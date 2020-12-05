@@ -23,7 +23,10 @@ def load_map(filename='./inputs/day03.input.txt'):
     with open(filename) as fh:
          return fh.read().splitlines()
 
-def peek(m = ['.'], position = (0,0), slope=(0,0), x_boundary = 32):
+def peek(m=None, position = (0, 0), slope=(0, 0), x_boundary = 32):
+    if m is None:
+        m = ['.']
+
     x, y = position
     dx, dy = slope
     line = ''
@@ -36,7 +39,10 @@ def peek(m = ['.'], position = (0,0), slope=(0,0), x_boundary = 32):
     except IndexError: 
         return None # we've reached the bottom of the map
 
-def count_trees(map = ['.'], slope = (3,1)):
+def count_trees(map=None, slope = (3, 1)):
+    if map is None:
+        map = ['.']
+
     def is_tree(char):
         return char == '#' 
     
